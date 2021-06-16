@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  font-family: cursive;
+}
+
+.hangman_title {
+  margin-top: 40px;
+  text-decoration: underline;
+  font-size: 45px;
+}
+
+.subject {
+  margin-top: 30px;
+  font-size: 20px;
+}
+
+.wrong_guesses {
+  font-size: 20px;
+  position: fixed;
+  top: 6%;
+  right: 7%;
+}
+
+.guess {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.current_guesses {
+  font-size: 40px;
+}
+
+.action_container {
+  margin-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.action_container .word {
+  font-size: 27px;
+}
+
+.action_container .word span {
+  margin-right: 10px;
+}
+
+.word span.empty {
+  margin-right: 25px;
+}
+
+.images img {
+  margin-right: 100px;
+}
+
+.restart_button,
+.keyboard_button {
+  background-color: rgb(20, 141, 20);
+  border: none;
+  border-radius: 12px;
+  font-size: 22px;
+  color: white;
+  padding: 5px 15px;
+  margin: 6px;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.restart_button:hover,
+.keyboard_button:hover {
+  background-color: rgba(29, 131, 29, 0.253);
+}
+
+.keyboard_button.correct:disabled,
+.keyboard_button:disabled {
+  background-color: rgba(29, 233, 29, 0.7);
+}
+
+.keyboard_button.wrong:disabled {
+  background-color: red;
+}
+
+.restart_button {
+  margin-top: 25px;
+}
+
+.keyboard {
+  margin-top: 23px;
+  max-width: 600px;
+}
+
+.wrong_guesses {
+  color: rgba(29, 233, 29, 0.9);
+  transition: all 0.3s ease;
+}
+
+.end_container {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 99;
+  background: rgba(0, 0, 0, 0.8);
+  transition: all 0.3s ease;
+}
+
+@keyframes model {
+  0% {
+    top: 40%;
+    opacity: 0.1;
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+  }
+}
+
+.model_container {
+  position: absolute;
+  border-radius: 12px;
+  width: 500px;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.result {
+  margin-bottom: 10px;
+  font-size: 40px;
+}
+
+.model_random_word {
+  margin-bottom: 10px;
+}
+
+.model_wrong_guesses {
+  display: none;
+}
+
+.result.won::after {
+  content: "You Won!";
+  color: rgb(20, 141, 20);
+}
+
+.result.lost::after {
+  content: "You Lost!";
+  color: red;
+}
+
+.model_container p {
+  font-size: 18px;
+}
+
+.model_random_word span {
+  font-size: 23px;
+}
+
+.model_random_word span,
+.model_wrong_guesses span {
+  font-weight: bold;
+}
+
+.model_wrong_guesses span {
+  font-size: 30px;
+  position: relative;
+  top: 10%;
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hangman</title>
+    <link rel="stylesheet" href="./game.css" />
+  </head>
+  <body>
+    <center>
+      <h1 class="hangman_title">Hangman</h1>
+      <p class="wrong_guesses">
+        Wrong Guesses: <span class="guess current_guesses"></span> of
+        <span class="guess all_guesses"></span>
+      </p>
+      <p class="subject">
+        Subject:
+        <b
+          ><u><span></span></u
+        ></b>
+      </p>
+      <div class="action_container">
+        <div class="images">
+          <img src="./images/0.jpg" alt="" />
+        </div>
+        <div class="word"></div>
+      </div>
+
+      <div class="end_container">
+        <div class="model_container">
+          <h1 class="result won"></h1>
+          <p class="model_random_word">
+            The word was: <span>great wall of china </span>
+          </p>
+          <p class="model_wrong_guesses">Wrong guesses: <span></span></p>
+          <button
+            class="restart_button play_again_btn"
+            onclick="location.reload()"
+          >
+            Play Again
+          </button>
+        </div>
+      </div>
+
+      <div class="keyboard"></div>
+
+      <button class="restart_button" onclick="location.reload()">
+        Restart
+      </button>
+    </center>
+
+    <script src="hangman.js"></script>
+  </body>
+</html>
